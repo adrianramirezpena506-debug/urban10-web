@@ -1,4 +1,6 @@
-const mapUrl = 'https://www.google.com/maps/search/?api=1&query=Barrio+La+Granja+San+Pedro+de+Montes+de+Oca+Costa+Rica'
+const coordinates = '9.92676382643485,-84.05048519126767'
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${coordinates}`
+const mapEmbedUrl = `https://www.google.com/maps?q=${coordinates}&z=17&output=embed`
 
 export function LocationSection() {
   return (
@@ -15,10 +17,15 @@ export function LocationSection() {
         </ul>
         <a className="button button--dark" href={mapUrl} target="_blank" rel="noreferrer">Abrir ubicación en Google Maps ↗</a>
       </div>
-      <div className="map-art" aria-label="Referencia gráfica de la ubicación en Barrio La Granja">
-        <span className="road road--one" /><span className="road road--two" /><span className="road road--three" />
-        <div className="map-pin"><span>10</span><p><strong>URBAN 10</strong>Barrio La Granja</p></div>
-        <p className="map-note">Referencia general · Consulte el mapa para navegación</p>
+      <div className="map-art">
+        <iframe
+          src={mapEmbedUrl}
+          title="Ubicación de URBAN 10 en Barrio La Granja, San Pedro"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+        <div className="map-label" aria-hidden="true"><strong>URBAN 10</strong><span>Barrio La Granja · San Pedro</span></div>
       </div>
     </section>
   )
