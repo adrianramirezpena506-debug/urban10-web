@@ -34,7 +34,7 @@ export const apartments: ApartmentType[] = [
     bedrooms: '2 habitaciones',
     bathrooms: '2 baños completos',
     parking: '1 parqueo',
-    price: 'Desde $156,000',
+    price: 'Desde $168,000',
     delivery: 'Junio 2027',
     image: '/assets/urban10/floorplans/two-bedroom-axonometric.webp',
     imageAlt: 'Distribución tridimensional del apartamento de dos habitaciones',
